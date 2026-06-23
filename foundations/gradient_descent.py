@@ -9,9 +9,8 @@ class Solution:
             ans = 2*x
             return ans
         x=init
+        # Update rule:        x = x - learning_rate * f'(x)
         for i in range(iterations):
             x = x-learning_rate*deriv(x)
-        return round(x,5)
-        # Update rule:        x = x - learning_rate * f'(x)
         # Round final answer to 5 decimal places
-        pass
+        return round(x,5)
